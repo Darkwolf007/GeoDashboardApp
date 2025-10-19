@@ -7,7 +7,7 @@ import axios from 'axios';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-const BASE_URL = "https://geo-dashboard-app.vercel.app";
+const BACKEND_URL = "https://geo-dashboard-app.vercel.app";
 
 //const BACKEND_URL = 'http://localhost:8000/predict'; // Update if backend is hosted elsewhere
 
