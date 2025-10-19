@@ -204,7 +204,7 @@ const App = () => {
 															}
 															const predict_price = predictPriceObj && predictPriceObj[housingType] ? predictPriceObj[housingType] : {};
 															try {
-																const res = await axios.post(`${BACKEND_URL}/predict`{
+																const res = await axios.post(`${BACKEND_URL}/predict`,{
 																	zone_index,
 																	area,
 																	rooms_en,
