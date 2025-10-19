@@ -7,7 +7,7 @@ import axios from 'axios';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-const BACKEND_URL = "https://geo-dashboard-app.vercel.app";
+const BACKEND_URL = "https://geo-dashboard-app.vercel.app/predict"; // Update if backend is hosted elsewhere
 
 //const BACKEND_URL = 'http://localhost:8000/predict'; // Update if backend is hosted elsewhere
 
@@ -122,7 +122,7 @@ const App = () => {
 						   predict_price[lastYear] = predictPriceObj[housingType][lastYear];
 					   }
 				   }
-				   axios.post(BACKEND_URL, {
+				   axios.post(`${BACKEND_URL}/predict`, {
 					   zone_index,
 					   area: selectedArea?.Area || '',
 					   rooms_en,
@@ -204,7 +204,7 @@ const App = () => {
 															}
 															const predict_price = predictPriceObj && predictPriceObj[housingType] ? predictPriceObj[housingType] : {};
 															try {
-																const res = await axios.post(BACKEND_URL, {
+																const res = await axios.post(`${BACKEND_URL}/predict`{
 																	zone_index,
 																	area,
 																	rooms_en,
