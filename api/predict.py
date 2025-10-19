@@ -49,6 +49,9 @@ class PredictionRequest(BaseModel):
     actual_price: dict | None = None
     predict_price: dict | None = None
 
+@app.get("/")
+def ping():
+    return {"status": "ok", "message": "GeoDashboard backend is live 🚀"}
 
 # ------------------------------
 # Predict Endpoint
